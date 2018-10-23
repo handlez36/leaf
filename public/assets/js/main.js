@@ -23,16 +23,25 @@
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+
+			// Dropdowns.
+			$('#nav > ul').dropotron({
+			// $('#drop-down-nav').dropotron({
+				mode: 'fade',
+				speed: 300,
+				alignment: 'center',
+				noOpenerFade: true
+			});
 		});
 
 	// Dropdowns.
 		// $('#nav > ul').dropotron({
-		$('#drop-down-nav').dropotron({
-			mode: 'fade',
-			speed: 300,
-			alignment: 'center',
-			noOpenerFade: true
-		});
+		// // $('#drop-down-nav').dropotron({
+		// 	mode: 'fade',
+		// 	speed: 300,
+		// 	alignment: 'center',
+		// 	noOpenerFade: true
+		// });
 
 	// Nav.
 

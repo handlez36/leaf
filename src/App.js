@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 /* Image imports */
 // import * as pics from './../src/assets/images/*';
 import pic01 from './../src/assets/images/pic01.jpg';
@@ -12,13 +13,14 @@ import pic05 from './../src/assets/images/pic05.jpg';
 import pic06 from './../src/assets/images/pic06.jpg';
 import pic07 from './../src/assets/images/pic07.jpg';
 import promo from './../src/assets/images/promo.jpg';
+import tlf01 from './../src/assets/images/tlf01.png';
 
 
 class App extends Component {
   render() {
     return (
       <div id="page-wrapper">
-
+      
 			{/* <!-- Header --> */}
 				<div id="header-wrapper">
 					<div id="header" className="container">
@@ -57,6 +59,7 @@ class App extends Component {
 
 					{/* <!-- Hero --> */}
 						<section id="hero" className="container">
+              {/* <img src={tlf01} alt='logo' /> */}
 							<header>
 								<h2>The Leaf Foundation</h2>
 							</header>
