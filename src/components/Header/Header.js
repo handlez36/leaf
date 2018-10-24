@@ -52,7 +52,7 @@ const Header = (props) => {
 
             {/* <!-- Hero --> */}
             <section id="hero" className="container">
-                <img src={HeaderPhoto} alt='logo' />
+                {/* <img src={HeaderPhoto} alt='logo' /> */}
                 <div id='hero-logo'>
                     <img src={Logo1} alt='header-logo' />
                 </div>

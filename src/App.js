@@ -24,11 +24,11 @@ class App extends Component {
 			<Header />
 
 			{/* <!-- Features 1 --> */}
-			<Features header />
-			<Features header={false} />
+			{/* <Features header />
+			<Features header={false} /> */}
 
 			{/* <!-- Footer --> */}
-			<Footer />
+			{/* <Footer /> */}
 		</div>
     );
   }
