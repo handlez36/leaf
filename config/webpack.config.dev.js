@@ -204,7 +204,14 @@ module.exports = {
                 },
               },
               {
-                loader: require.resolve('sass-loader')
+                loader: require.resolve('resolve-url-loader')
+              },
+              {
+                loader: require.resolve('sass-loader'),
+                options: {
+                  sourceMap: true,
+                  sourceMapContents: false
+                }
               }
             ]
           },
