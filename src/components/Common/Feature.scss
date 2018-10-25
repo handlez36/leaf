@@ -1,0 +1,31 @@
+.feature-element {
+  padding-left: 1.95vw;
+
+  .mission2 {
+    width: 19.00vw;
+    height: auto;
+    color: black;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: 'lato';
+
+    .icon {
+      font-size: 42px;
+      color: lightblue;
+    }
+
+    .mission-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: #752337;
+    }
+
+    .text {
+      margin-top: 1em;
+      font-size: 16px;
+    }
+  }
+}

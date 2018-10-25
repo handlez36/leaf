@@ -1,49 +1,35 @@
 .feature-row.wrapper {
   flex: 4 0 auto !important;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   .container {
-    // font-family: 'Ramabhadra', sans-serif;
-    // font-weight: 700;
-  }
+    margin-left: 0;
+    margin-right: 0;
+    width: 70vw;
 
-  .row.features {
-    .image-wrapper.first {
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-
-      &:before {
-
-      }
+    .triangle {
+      position: absolute;
+      left: 49vw;
+      top: -2.5vw;
+      width: 3.90vw;
+      height: 3.90vw;
+      background-color: #226B86;
+      transform: rotate(45deg);
+      box-shadow: 0 1px 5px 1px gray;
     }
-    .mission {
-      width: 293px;
-      height: 150px;
-      background-color: orange;
-      color: white;
-      font-size: 13px;
-      line-height: 1.5;
-      padding-top: 1em;
-      padding-left: 1em;
-      padding-right: 1em;
-      box-shadow: 1px 1px 15px 1px lightgray;
 
-      .icon {
-        font-size: 22px;
-      }
-
-      .text {
-        margin-top: 1em;
-      }
+    .features {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+      height: auto;
     }
-  }
-}
-
-.feature-row.wrapper.first {
-  flex: 1 0 auto !important;
-  .mission {
-    // box-shadow: 1px 1px 15px 2px gray !important;
   }
 }

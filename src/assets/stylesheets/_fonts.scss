@@ -1,0 +1,24 @@
+$minScreenSize: 1024px;
+$maxScreenSize: 2560px;
+
+    /* Strip the unit off of a measurement (i.e., 10px -> 10). Needed for the fluid typography calculation */
+    @function strip-unit($number) {
+      @if type-of($number) == "number" and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+      }
+    
+      @return $number;
+    }
+
+    /* minFontSize + unitless(maxFontSize - minFontSize) * (11vw - minScreenSize) / unitless(maxScreenSize - minScreenSize) */
+    @function calculateFontSize($minFontSize, $maxFontSize) {
+      @return 
+      calc(
+        #{$minFontSize} + 
+        #{strip-unit($maxFontSize - $minFontSize)} *
+        (100vw - #{$minScreenSize}) /
+        #{strip-unit($maxScreenSize - $minScreenSize)}
+      );
+    }
+
+    

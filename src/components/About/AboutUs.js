@@ -11,6 +11,20 @@ import './AboutUs.scss'
 import Header from '../Header/Header';
 
 const AboutUs = (props) => {
+  const rowOne = [
+    { icon: 'fa-graduation-cap', text: 'Educate on the importance of financial literacy.' },
+    { icon: 'fa-graduation-cap', text: 'Provide support to advance the focus of education for teachers, students and schools.' },
+    { icon: 'fa-life-ring', text: 'Concentrate on the needs and support structure required of disadvantaged youth and the elderly.' },
+    { icon: 'fa-handshake-o', text: 'Educate on the importance of financial literacy.' },
+    { icon: 'fa-key', text: 'Provide support to advance the focus of education for teachers, students and schools.' },
+    { icon: 'fa-handshake-o', text: 'Concentrate on the needs and support structure required of disadvantaged youth and the elderly.' },
+  ];
+
+  const rowTwo = [
+    { icon: 'fa-handshake-o', text: 'Educate on the importance of financial literacy.' },
+    { icon: 'fa-key', text: 'Provide support to advance the focus of education for teachers, students and schools.' },
+    { icon: 'fa-handshake-o', text: 'Concentrate on the needs and support structure required of disadvantaged youth and the elderly.' },
+  ]
   const rowOneText = [
     "Educate on the importance of financial literacy.",
     "Provide support to advance the focus of education for teachers, students and schools.",
@@ -33,8 +47,11 @@ const AboutUs = (props) => {
 
   return (
     <div className='about-us'>
-      <FeatureRow text={rowOneText} icons={rowOneIcons} header />
-      <FeatureRow text={rowTwoText} icons={rowTwoIcons} />
+      <div className='banner'>
+        <div class='question'>What is The Leaf Foundation</div>
+        <div class='answer'>The Leaf Foundation was established in June 2018. We are recognized as a public non-profit 501 (c) (3) organization whose mission is to...</div>
+      </div>
+      <FeatureRow details={rowOne} />
     </div>
   );
 }

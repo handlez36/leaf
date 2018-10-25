@@ -1,11 +1,11 @@
 import React from 'react';
 
 import TopMessage from '../Common/TopMessage';
+import Feature from '../Common/Feature';
 import './Features.scss'
 
-const Features = ({ text, icons, header }) => {
-    const [first, second, third] = text;
-    const [icon1, icon2, icon3] = icons;
+const Features = ({ details, header }) => {
+    const [feature1, feature2, feature3] = details;
 
     return (
         <div className={`wrapper feature-row ${header ? 'first' : ''}`}>
@@ -18,39 +18,19 @@ const Features = ({ text, icons, header }) => {
                         organization whose mission is to:' 
                     />
                 }
+                <div className="triangle"></div>
                 <div className="row features">
-                    <section className="col-4 col-12-narrower feature">
-                        <div className="image-wrapper first">
-                            <a href="#" className="image featured">
-                                <div className='mission'>
-                                    <div className={`icon ${icon1}`} />
-                                    <div className='text'>{first}</div>
-                                </div>
-                            </a>
-                        </div>
-                    </section>
-                    <section className="col-4 col-12-narrower feature">
-                        <div className="image-wrapper">
-                            <a href="#" className="image featured">
-                                {/* <img src={pic04} alt="" /> */}
-                                <div className='mission'>
-                                    <div className={`icon ${icon2}`} />
-                                    <div className='text'>{second}</div>
-                                </div>
-                            </a>
-                        </div>
-                    </section>
-                    <section className="col-4 col-12-narrower feature">
-                        <div className="image-wrapper">
-                            <a href="#" className="image featured">
-                                {/* <img src={pic05} alt="" /> */}
-                                <div className='mission'>
-                                    <div className={`icon ${icon3}`} />
-                                    <div className='text'>{third}</div>
-                                </div>
-                            </a>
-                        </div>
-                    </section>
+                    { details.map( (feature, index) => {
+                        return (
+                            <Feature
+                                title={feature.title}
+                                icon={feature.icon}
+                                text={feature.text}
+                            />
+                        )
+                    })
+
+                    }
                 </div>
                 {/* <ul className="actions major">
                     <li><a href="#" className="button">Aliquet at convallis</a></li>
