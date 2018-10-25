@@ -31,10 +31,10 @@ const Header = ({ history }) => {
                             <Link to="/activities">Activities</Link>
                         </li>
                         <li className="break">
-                            <Link to="/donate">Donate</Link>
+                            <Link to="/">Donate</Link>
                         </li>
                         <li>
-                            <Link to="/scholarships">Scholarships</Link>
+                            <Link to="/">Scholarships</Link>
                         </li>
                     </ul>
                 </nav>

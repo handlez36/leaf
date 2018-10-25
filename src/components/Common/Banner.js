@@ -1,10 +1,11 @@
 import React from 'react';
 import './Banner.scss'
 
-const Banner = ({ children }) => {
+const Banner = ({ title, tagline }) => {
   return (
     <div className='banner'>
-      {children}
+      <div class='question'>{title}</div>
+      <div class='answer'>{tagline}</div>
     </div>
   );
 }

@@ -1,5 +1,31 @@
 .activities {
   .wrapper {
     padding-top: 2em;
+    height: 7vh;
+    font-weight: 600;
+
+    .next-event {
+      // margin-top: 1vh;
+    }
+  }
+
+  .triangle {
+    position: absolute;
+    left: 49vw;
+    top: -2.5vw;
+    width: 3.90vw;
+    height: 3.90vw;
+    background-color: #226B86;
+    transform: rotate(45deg);
+    box-shadow: 0 1px 5px 1px gray;
+  }
+
+  .upcoming-events {
+    margin-top: 25vh;
+    padding-top: 3vh;
+    padding-left: 12vw;
+    height: 7vh;
+    background: #F2F2F2;
+    font-weight: 600;
   }
 }
