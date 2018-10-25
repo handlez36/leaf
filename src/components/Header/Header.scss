@@ -1,39 +1,22 @@
 #header-wrapper {
+  flex: 0 1 86px;
   width: 100%;
-  height: 100%;
+  min-height: 86px;
   padding: 4em 0 0 0 !important;
-  
-  #hero {
-    margin-top: 1em;
-    width: 100% !important;
-    height: 100%;
-    background-image: url('../../assets/images/santi-vedri-resized.jpg');
-    background-size: cover;
 
-    img {
-      width: 100%;
-    }
+  #nav {
+    height: 86px;
+    box-shadow: 0 1px 15px 1px gray;
+    z-index: 1000;
 
-    #hero-logo {
-      position: absolute;
-      bottom: 0em;
-      left: 0;
-      z-index: 1000;
-      width: 100vw;
-      // height: 20vw;
-      border: 1px solid green;
-
-      img {
-        width: 60vw;
-        // height: 100%;
-        // margin-left: -8vw;
-        border: 1px solid black;
-      }
+    ul {
+      height: 86px;
     }
   }
 
   #nav-logo {
     position: absolute;
+    z-index: 100;
     top: 0;
     right: 1em;
     width: 82px;
@@ -41,6 +24,10 @@
 
     img {
       width: 100%;
+    }
+
+    a {
+      border-bottom: 0;
     }
   }
 }

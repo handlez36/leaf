@@ -1,0 +1,49 @@
+.feature-row.wrapper {
+  flex: 4 0 auto !important;
+
+  .container {
+    // font-family: 'Ramabhadra', sans-serif;
+    // font-weight: 700;
+  }
+
+  .row.features {
+    .image-wrapper.first {
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:before {
+
+      }
+    }
+    .mission {
+      width: 293px;
+      height: 150px;
+      background-color: orange;
+      color: white;
+      font-size: 13px;
+      line-height: 1.5;
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      box-shadow: 1px 1px 15px 1px lightgray;
+
+      .icon {
+        font-size: 22px;
+      }
+
+      .text {
+        margin-top: 1em;
+      }
+    }
+  }
+}
+
+.feature-row.wrapper.first {
+  flex: 1 0 auto !important;
+  .mission {
+    // box-shadow: 1px 1px 15px 2px gray !important;
+  }
+}

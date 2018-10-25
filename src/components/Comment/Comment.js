@@ -22,7 +22,7 @@ class Comment extends Component {
 
     render() {
         return (
-            <section className="col-6 col-12-narrower">
+            <section className="comment-form col-6 col-12-narrower">
                 <form method="post">
                     <div className="row gtr-50">
                         <div className="col-6 col-12-mobile">

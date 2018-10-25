@@ -109,14 +109,14 @@ input, select, textarea {
 	input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
-		color: #52575c;
+		color: #1D6F43;
 		line-height: 1.75em;
 		font-size: 15pt;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		color: #52575c;
+		/* color: #52575c; */
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {

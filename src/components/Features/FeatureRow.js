@@ -1,45 +1,55 @@
 import React from 'react';
 
+import TopMessage from '../Common/TopMessage';
 import './Features.scss'
 
-import pic03 from '../../../src/assets/images/pic03.jpg';
-import pic04 from '../../../src/assets/images/pic04.jpg';
-import pic05 from '../../../src/assets/images/pic05.jpg';
+const Features = ({ text, icons, header }) => {
+    const [first, second, third] = text;
+    const [icon1, icon2, icon3] = icons;
 
-const Features = ({ header }) => {
     return (
-        <div className="wrapper">
+        <div className={`wrapper feature-row ${header ? 'first' : ''}`}>
             <section className="container">
-                { header &&
-                    <header className="major">
-                        {/* <h2>Mission statement</h2> */}
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                            enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea commodo consequat.</p>
-                    </header>
+                { header && 
+                    <TopMessage 
+                        page='About Us'
+                        text='The Leaf Foundation was established in June 2018. 
+                        We are recognized as a public non-profit 501 (c) (3) 
+                        organization whose mission is to:' 
+                    />
                 }
                 <div className="row features">
                     <section className="col-4 col-12-narrower feature">
                         <div className="image-wrapper first">
-                            <a href="#" className="image featured"><img src={pic03} alt="" /></a>
+                            <a href="#" className="image featured">
+                                <div className='mission'>
+                                    <div className={`icon ${icon1}`} />
+                                    <div className='text'>{first}</div>
+                                </div>
+                            </a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
-                        vel sem sit dolor neque semper magna lorem ipsum.</p>
                     </section>
                     <section className="col-4 col-12-narrower feature">
                         <div className="image-wrapper">
-                            <a href="#" className="image featured"><img src={pic04} alt="" /></a>
+                            <a href="#" className="image featured">
+                                {/* <img src={pic04} alt="" /> */}
+                                <div className='mission'>
+                                    <div className={`icon ${icon2}`} />
+                                    <div className='text'>{second}</div>
+                                </div>
+                            </a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
-                        vel sem sit dolor neque semper magna lorem ipsum.</p>
                     </section>
                     <section className="col-4 col-12-narrower feature">
                         <div className="image-wrapper">
-                            <a href="#" className="image featured"><img src={pic05} alt="" /></a>
+                            <a href="#" className="image featured">
+                                {/* <img src={pic05} alt="" /> */}
+                                <div className='mission'>
+                                    <div className={`icon ${icon3}`} />
+                                    <div className='text'>{third}</div>
+                                </div>
+                            </a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
-                        vel sem sit dolor neque semper magna lorem ipsum.</p>
                     </section>
                 </div>
                 {/* <ul className="actions major">
