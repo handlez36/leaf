@@ -1,7 +1,10 @@
 .activities {
+  padding-bottom: 2vh;
+
   .wrapper {
     padding-top: 2em;
-    height: 7vh;
+    min-height: 7vh;
+    height: auto;
     font-weight: 600;
 
     .next-event {
