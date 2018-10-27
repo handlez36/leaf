@@ -22,7 +22,7 @@ const ScholarshipRow = ({ image, content, url, index }) => {
           </div>
         </div>
       </div>
-      <hr />
+      {index < 3 && <hr /> }
     </div>
   );
 }
