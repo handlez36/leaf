@@ -11,9 +11,9 @@ const Header = ({ history }) => {
             <div id="header" className="container">
 
                 <h1 id="logo">
-                    <a href="index.html">
+                    <Link to="/">
                         Home
-                    </a>
+                    </Link>
                 </h1>
 
                 <nav id="nav">
@@ -34,7 +34,7 @@ const Header = ({ history }) => {
                             <Link to="/">Donate</Link>
                         </li>
                         <li>
-                            <Link to="/">Scholarships</Link>
+                            <Link to="/scholarships">Scholarships</Link>
                         </li>
                     </ul>
                 </nav>

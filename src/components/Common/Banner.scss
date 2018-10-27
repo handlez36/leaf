@@ -17,12 +17,38 @@
   color: white;
   font-family: 'Fjalla One', sans-serif;
 
+  .triangle {
+    display: none;
+    position: absolute;
+    // z-index: 5000;
+    left: 49vw;
+    top: 250px;
+    width: 3.90vw;
+    height: 3.90vw;
+    background-color: #226B86;
+    transform: rotate(45deg);
+    // box-shadow: 0 1px 5px 1px gray;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    // height: 230px;
+    top: -170px;
+    border: 1px solid black;
+    opacity: 0.2;
+    z-index: 1;
+    overflow: hidden;
+  }
+
   .question {
     font-size: 3vw;
+    z-index: 1000;
   }
 
   .answer {
     margin-top: 4vh;
     font-size: 1.3vw;
+    z-index: 1000;
   }
 }

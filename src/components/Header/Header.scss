@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 86px;
   padding: 4em 0 0 0 !important;
+  z-index: 1000;
 
   #nav {
     height: 86px;
@@ -18,7 +19,7 @@
     position: absolute;
     z-index: 100;
     top: 0;
-    right: 1em;
+    left: 1em;
     width: 82px;
     height: 82px;
 

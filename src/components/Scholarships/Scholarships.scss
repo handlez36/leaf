@@ -1,0 +1,33 @@
+.scholarships {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+
+  .main {
+    flex: 1 1 auto;
+    z-index: 200;
+    background-color: white;
+
+    .scholarship {
+      height: auto;
+    }
+
+    .section-banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 25vh;
+      margin-bottom: 1vh;
+      color: white;
+      font-size: 28px;
+      font-weight: 700;
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      padding-left: 3vw;
+      border: 1px solid white;
+      background-color: white;
+      box-shadow: 0 1px 10px 0 black;
+    }
+  }
+}
