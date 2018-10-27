@@ -1,9 +1,10 @@
 #header-wrapper{
   flex: 0 0 auto;
 }
-.about-us, .activities, .scholarships, #hero {
+.about-us, .activities, .scholarships, .contact-us, .donate, #hero {
   flex: 1 0 auto;
 }
 #my-footer-wrapper {
   flex: 0 0 auto;
+  z-index: 100;
 }

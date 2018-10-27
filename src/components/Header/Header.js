@@ -21,7 +21,6 @@ const Header = ({ history }) => {
                         <Link to="/contact-us">
                             <img src={Logo2} alt='logo' />
                         </Link>
-                        {/* <img src={Logo2} alt='logo' /> */}
                     </div>
                     <ul id="main-nav">
                         <li>
@@ -31,7 +30,7 @@ const Header = ({ history }) => {
                             <Link to="/activities">Activities</Link>
                         </li>
                         <li className="break">
-                            <Link to="/">Donate</Link>
+                            <Link to="/donate">Donate</Link>
                         </li>
                         <li>
                             <Link to="/scholarships">Scholarships</Link>

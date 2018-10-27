@@ -1,48 +1,12 @@
-.title {
-  text-align: left;
-  height: auto;
-
-  div {
-    font-family: 'Lilita One', sans-serif;
-    font-size: 2em;
-    line-height: 1.2em;
-    color: #1D6F43;
-    // width: 22%;
-    width: 16vw;
-    height: auto;
-    border-right: 3px solid #5CBCBD;
-  }
-}
-
-.wrapper {
-  flex: 1 0 auto;
-  padding-bottom: 0.5em;
-  background-color: #F2F2F2;
-}
-
 .contact-us {
-  padding-top: 1.5em;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-left: 18vw;
-  // border: 1px solid black;
+  .comment-form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3vh;
 
-  .comment-text {
-    flex: 1 1 auto;
-    text-align: left;
-    margin-top: -4em;
-    padding-left: 1em;
-    padding-right: 1em;
-    font-family: 'Ramabhadra', sans-serif;
-    font-size: 19px;
-    // border-radius: 5px;
-    // box-shadow: 0 2px 7px 1px gray;
+    .comment-form {
+      flex: 0 1 50%;
+    }
   }
-
-}
-.next-section {
-  width: 100%;
-  height: auto;
-  border: 1px solid green;
 }

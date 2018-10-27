@@ -2,6 +2,7 @@ import React from 'react';
 
 import FeatureRow from '../Features/FeatureRow';
 import Banner from '../Common/Banner';
+import background from '../../assets/images/santi-vedri-resized.jpg'
 import './AboutUs.scss'
 
 const AboutUs = (props) => {
@@ -20,6 +21,7 @@ const AboutUs = (props) => {
       <Banner
         title='What is The Leaf Foundation'
         tagline='The Leaf Foundation was established in June 2018. We are recognized as a public non-profit 501 (c) (3) organization whose mission is to...'
+        backgroundImage={background}
       />
       <FeatureRow details={features} />
     </div>

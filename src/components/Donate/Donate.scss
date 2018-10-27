@@ -1,0 +1,12 @@
+.donate {
+  display: flex;
+  flex-direction: column;
+
+  .banner {
+    flex: 1 1 auto; 
+
+    img {
+      top: -160px;
+    }
+  }
+}
