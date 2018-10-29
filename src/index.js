@@ -6,9 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import HeaderRoute from './components/Common/HeaderRoute';
 import './index.css';
 
+const browserHistory = Router.browserHistory;
+
 ReactDOM.render(
-  <Router>
-    <HeaderRoute />
+  <Router history={browserHistory}>
+    <Route path="/" component={HeaderRoute} />
   </Router>, 
   document.getElementById('page-wrapper'));
 

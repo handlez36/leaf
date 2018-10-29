@@ -8,8 +8,8 @@ const ShortFooter = (props) => {
         <div id="my-footer-wrapper">
           <div id='contact-info-section'>
             <div className='phone-info'>
-              <div class='phone'><span className="icon fa-phone"></span> 999.999.9999</div>
-              <div class='email'><span className="icon fa-envelope"></span> contact@theleaffoundation.org</div>
+              <div className='phone'><span className="icon fa-phone"></span> 999.999.9999</div>
+              <div className='email'><span className="icon fa-envelope"></span> contact@theleaffoundation.org</div>
             </div>
           </div>
           <div id="copyright" className="container">

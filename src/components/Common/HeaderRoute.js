@@ -14,18 +14,20 @@ import './HeaderRoute.scss';
 
 class HeaderRouter extends Component {
   render() {
+    console.log('Props: ', this.props);
+    
     return (
       [
-        <Header />,
-        <Switch>
-          <Route path="/about-us" component={AboutUs} />
-          <Route path="/activities" component={Activities} />
-          <Route path="/donate" component={Donate} />
-          <Route path="/scholarships" component={Scholarships} />
-          <Route path="/contact-us" component={ContactUs} />
-          <Route path="/" component={App} />
+        <Header key='header-component' {...this.props} />,
+        <Switch key='switch-component'>
+          <Route key='page' path="/about-us" component={AboutUs} />
+          <Route key='page' path="/activities" component={Activities} />
+          <Route key='page' path="/donate" component={Donate} />
+          <Route key='page' path="/scholarships" component={Scholarships} />
+          <Route key='page' path="/contact-us" component={ContactUs} />
+          <Route key='page' path="/" component={App} />
         </Switch>,
-        <ShortFooter />
+        <ShortFooter key='footer-component' />
       ]
     );
   }
