@@ -11,7 +11,7 @@ const ScholarshipRow = ({ image, content, url, index }) => {
           </div>
           <div className='content-text'>
           <div className='header'>
-              <span>{content.name}</span>
+              <span>The {content.name} Scholarship</span>
               <span>{content.date}</span>
             </div>
             <div className='body'>

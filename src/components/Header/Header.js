@@ -18,7 +18,7 @@ class Header extends Component  {
                 history.push('/activities'); break;
             case 'DONATE':      
                 history.push('/donate'); break;
-            case 'SCHOLARSHIP': 
+            case 'SCHOLARSHIPS': 
                 history.push('/scholarships'); break;
             case 'CONTACT':
                 history.push('/contact-us'); break;
@@ -32,10 +32,15 @@ class Header extends Component  {
             <div id="header-wrapper">
                 <div id="header" className="container">
     
-                    <h1 
+                    {/* <h1 
                         id="logo"
                         onClick={this.onClick('HOME')}>
                         Home
+                    </h1> */}
+                    <h1 id="logo">
+                        <Link to="/">
+                            Home
+                        </Link>
                     </h1>
     
                     <nav id="nav">
@@ -48,24 +53,28 @@ class Header extends Component  {
                         <ul id="main-nav">
                             <li>
                                 <span
+                                    className='menu-link'
                                     onClick={this.onClick('ABOUT')}>
                                     About Us
                                 </span>
                             </li>
                             <li>
                                 <span
+                                    className='menu-link'
                                     onClick={this.onClick('ACTIVITIES')}>
                                     Activities
                                 </span>
                             </li>
                             <li className="break">
                                 <span
+                                    className='menu-link'
                                     onClick={this.onClick('DONATE')}>
                                     Donate
                                 </span>
                             </li>
                             <li>
                                 <span
+                                    className='menu-link'
                                     onClick={this.onClick('SCHOLARSHIPS')}>
                                     Scholarships
                                 </span>
