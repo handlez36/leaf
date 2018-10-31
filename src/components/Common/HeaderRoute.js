@@ -10,11 +10,12 @@ import Activities from './../Activities/Activities';
 import Donate from './../Donate/Donate';
 import Scholarships from './../Scholarships/Scholarships';
 import ContactUs from './../ContactUs/ContactUs';
+import { MenuSwitcher } from '../Common/MenuSwitcher';
 import './HeaderRoute.scss';
 
 class HeaderRouter extends Component {
   render() {
-    console.log('Props: ', this.props);
+    const {location: {pathname}} = this.props;
     
     return (
       [

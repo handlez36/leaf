@@ -3,7 +3,10 @@ import axios from 'axios';
 
 import TopMessage from '../Common/TopMessage';
 import Banner from '../Common/Banner';
+import FeaturedEvent from './FeaturedEvent';
+import UpcomingEventList from './UpcomingEventList';
 import { EventsApi } from '../../services/events';
+import BannerImage from '../../assets/images/activities-banner.jpg';
 import './Activities.scss'
 
 class Activities extends Component {
@@ -30,59 +33,25 @@ class Activities extends Component {
       .catch(err => console.log('Network error retrieving Wordpress events. Error details: ', err))
   }
 
-  renderNextEvent(event) {
-    if (event) {
-      return (
-        <div className='next-event'>
-          <div className='title'>
-            <span>{event.title}</span>
-            <div>
-              <span>{event.date}</span>
-              <span></span>
-            </div>
-          </div>
-          <div className='event-image-lg'>
-            <img />
-            <div className='event-desc'>
-              {event.description}
-            </div>
-          </div>
-        </div>
-      )
-    } else {
-      return <div className='next-event'>Events coming soon!</div>
-    }
-  }
-
   render() {
-    const {events} = this.state;
-    const nextEvent = EventsApi.getNextEvent(events);
+    const {events}    = this.state;
+    const splitEvents = EventsApi.splitEvents(events);
     
     return (
       <div className='activities'>
         <Banner 
           title='ACTIVITIES'
           tagline='COMING SOON!!'
+          backgroundImage={BannerImage}
         />
         <div className="wrapper">
           <div className="next-event-section">
             <span>NEXT EVENT</span>
             { !events && <div>Loading...</div> }
-            { events && this.renderNextEvent(nextEvent) }
+            { events && <FeaturedEvent event={splitEvents['featured']} /> }
           </div>
-          <div className='upcoming-events-section'>
-            <span>UPCOMING EVENTS</span>
-            <div className='upcoming-event'>
-            </div>
-            <div className='upcoming-event'>
-            </div>
-            <div className='upcoming-event'>
-            </div>
-            <div className='upcoming-event'>
-            </div>
-            <div className='upcoming-event'>
-            </div>
-          </div>
+          { !events && <div>Loading...</div> }
+          { events && <UpcomingEventList events={splitEvents['remaining']} /> }
         </div>
       </div>
     );

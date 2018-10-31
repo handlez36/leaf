@@ -3,10 +3,16 @@
   flex-direction: column;
 
   .banner {
-    flex: 1 1 auto; 
+    flex: 1 1 auto;
+    padding-top: 0;
 
     img {
-      top: -160px;
+      width: 100%;
+      top: 87px;
+    }
+
+    .banner-content {
+      margin-top: 2.0em;
     }
   }
 }

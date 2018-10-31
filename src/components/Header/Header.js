@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Logo2 from '../../assets/images/logo2.png'
 import HeaderPhoto from '../../assets/images/santi-vedri-resized.jpg';
+import { MenuSwitcher } from '../Common/MenuSwitcher';
 import './Header.scss'
 
 class Header extends Component  {
@@ -23,26 +24,22 @@ class Header extends Component  {
             case 'CONTACT':
                 history.push('/contact-us'); break;
             default: 
-                history.push('/')
-        }
+                return false;
+        };
+
+        MenuSwitcher.setActive(target.toLowerCase());
+    }
+
+    componentDidMount() {
+        const {location: {pathname}} = this.props;
+
+        MenuSwitcher.switchMenu(pathname);
     }
     
     render() {
         return (
             <div id="header-wrapper">
                 <div id="header" className="container">
-    
-                    {/* <h1 
-                        id="logo"
-                        onClick={this.onClick('HOME')}>
-                        Home
-                    </h1> */}
-                    <h1 id="logo">
-                        <Link to="/">
-                            Home
-                        </Link>
-                    </h1>
-    
                     <nav id="nav">
                         <div id='nav-logo'>
                             <img
@@ -51,28 +48,35 @@ class Header extends Component  {
                                 alt='logo' />
                         </div>
                         <ul id="main-nav">
-                            <li>
+                            <li className='about-menu-option'>
                                 <span
                                     className='menu-link'
                                     onClick={this.onClick('ABOUT')}>
                                     About Us
                                 </span>
                             </li>
-                            <li>
+                            <li className='activities-menu-option'>
                                 <span
                                     className='menu-link'
                                     onClick={this.onClick('ACTIVITIES')}>
                                     Activities
                                 </span>
                             </li>
-                            <li className="break">
+                            <li className='home-menu-option'>
+                                <span
+                                    className='menu-link'
+                                    onClick={this.onClick('HOME')}>
+                                    HOME
+                                </span>
+                            </li>
+                            <li className="donate-menu-option">
                                 <span
                                     className='menu-link'
                                     onClick={this.onClick('DONATE')}>
                                     Donate
                                 </span>
                             </li>
-                            <li>
+                            <li className='scholarships-menu-option'>
                                 <span
                                     className='menu-link'
                                     onClick={this.onClick('SCHOLARSHIPS')}>

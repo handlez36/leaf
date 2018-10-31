@@ -1,0 +1,42 @@
+.upcoming-event {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    flex: 0 1 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 1em;
+    padding-top: 0.4em;
+  }
+
+  .description {
+    flex: 1 1 auto;
+    font-size: 12px;
+    padding-left: 1.5em;
+    width: 100%;
+  }
+
+  .image {
+    flex: 1 1 auto;
+    width: 100%;
+
+    p {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .date {
+    flex: 0 1 10%;
+    font-size: 14px;
+    padding-left: 1em;
+    padding-top: 0.4em;
+  }
+}

@@ -2,7 +2,8 @@ import React from 'react';
 
 import FeatureRow from '../Features/FeatureRow';
 import Banner from '../Common/Banner';
-import background from '../../assets/images/santi-vedri-resized.jpg'
+// import background from '../../assets/images/santi-vedri-resized.jpg'
+import background from '../../assets/images/about-us-banner-resized.jpg'
 import './AboutUs.scss'
 
 const AboutUs = (props) => {
