@@ -15,4 +15,14 @@
       margin-top: 2.0em;
     }
   }
+
+  form {
+    position: relative;
+
+    input {
+      position: relative;
+      cursor: pointer;
+      z-index: 5000;
+    }
+  }
 }

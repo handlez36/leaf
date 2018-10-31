@@ -6,6 +6,14 @@ import background from '../../assets/images/donate-banner-resized.jpg'
 import './Donate.scss'
 
 class Donate extends Component {
+  goToPayPal() {
+    console.log('In GoToPaypal');
+
+    const form = this.refs.paypal_form;
+
+    form.submit();
+  }
+
   render() {
     return (
       <div className='donate'>
@@ -18,11 +26,18 @@ class Donate extends Component {
           backgroundImage={background}
         >
           {/* <button className='btn btn-success btn-sm btn-paypal'>Donate Now</button> */}
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <form ref='paypal_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
             <input type="hidden" name="cmd" value="_s-xclick" />
             <input type="hidden" name="hosted_button_id" value="M82UDCCVVWDFY" />
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            <input
+              // onClick={this.goToPayPal} 
+              type="image" 
+              src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" 
+              border="0" 
+              name="submit" 
+              title="PayPal - The safer, easier way to pay online!" 
+              alt="Donate with PayPal button" />
+            {/* <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /> */}
           </form>
         </Banner>
       </div>
