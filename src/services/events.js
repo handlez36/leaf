@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://leaffoundation.org/wp-json'
+const BASE_URL = 'https://leaffoundation.org/wp-json'
 
 export class EventsApi {
   static all() {
