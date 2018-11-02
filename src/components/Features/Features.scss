@@ -11,6 +11,7 @@
     margin-left: 0;
     margin-right: 0;
     width: 70vw;
+    border: 1px solid black;
 
     // .triangle {
     //   position: absolute;
@@ -27,6 +28,7 @@
     .features {
       display: flex;
       flex-direction: row;
+      // justify-content: center;
       justify-content: center;
       width: 100%;
       margin-left: 0;

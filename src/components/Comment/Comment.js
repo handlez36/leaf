@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+
+import { EmailProvider } from '../../services/email';
 import './Comment.scss'
 
 class Comment extends Component {
-    state = {
-        name: '',
-        email: '',
-        message: ''
+    constructor(props) {
+        super(props);
+
+        this.email = new EmailProvider();
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
+        }
     }
 
     onChange = (field) => (event) => {
@@ -16,8 +23,23 @@ class Comment extends Component {
         this.setState({ name: '', email: '', message: '' });
     }
 
-    submitForm = () => {
+    submitForm = (e) => {
+        e.preventDefault();
+
         console.log('Submitting user suggestion.');
+
+        this.email.send(this.state)
+            .then(response => {
+                this.clearForm();
+                this.toggleFooter()
+            })
+            .catch(error => console.log('Mail send error: ', error));
+    }
+
+    toggleFooter = () => {
+        const footer = document.getElementById('my-footer-wrapper');
+
+        footer.classList.add('collapsed');
     }
 
     render() {
@@ -30,6 +52,7 @@ class Comment extends Component {
                                 onChange={this.onChange('name')}
                                 name="name" 
                                 placeholder="Name" 
+                                value={this.state.name}
                                 type="text" />
                         </div>
                         <div className="col-6 col-12-mobile">
@@ -37,27 +60,35 @@ class Comment extends Component {
                                 onChange={this.onChange('email')}
                                 name="email" 
                                 placeholder="Email" 
+                                value={this.state.email}
                                 type="text" />
                         </div>
                         <div className="col-12">
                             <textarea
                                 onChange={this.onChange('message')} 
                                 name="message" 
+                                value={this.state.message}
                                 placeholder="Message"></textarea>
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 buttons">
                             <ul className="actions">
                                 <li>
-                                    <input 
+                                    <button 
                                         onClick={this.submitForm}
                                         type="submit" 
-                                        value="Send Message" />
+                                        value="Send Message"
+                                    >
+                                        Send
+                                    </button>
                                 </li>
                                 <li>
-                                    <input 
+                                    <button 
                                         onClick={this.clearForm}
                                         type="reset" 
-                                        value="Clear form" />
+                                        value="Clear form"
+                                    >
+                                        Clear Form
+                                    </button>
                                 </li>
                             </ul>
                         </div>

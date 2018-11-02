@@ -5,26 +5,36 @@
   padding: 4em 0 0 0 !important;
   z-index: 1000;
 
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  // background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  // background: linear-gradient(175deg, #4D879C 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: linear-gradient(175deg, #4D879C 0%, rgba(246,246,246,1) 70%, rgba(237,237,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+
   #nav {
     height: 86px;
     box-shadow: 0 1px 15px 1px rgb(48, 47, 47);
     z-index: 1000;
-    // background-color: lightblue;
-    // line-height: 6em;
-    // font-weight: 600;
 
     ul {
       height: 86px;
 
+      .menu-link {
+        color: black;
+        font-weight: 400;
+      }
+
       li.active {
         display: block;
-        // width: 100%;
         height: 4em;
         line-height: 4em;
-        background: rgba(255, 255, 255, 0.15);
+        background-color: #4D879C;
         border: solid 1px;
-        border-color: #fff;
-        border-color: rgba(255, 255, 255, 0.75);
         border-top: 0;
         border-radius: 0 0 0.35em 0.35em;
         color: #fff;
@@ -34,12 +44,10 @@
         text-align: center;
         text-transform: uppercase;
         border-color: none;
-        box-shadow: 1px 0 15px 0 white;
-        // background-color: transparent;
-        // background-color: white;
+        box-shadow: 1px 0 15px 0 #4D879C;
 
         .menu-link {
-          // color: black;
+          color: white;
         }
       }
     }
@@ -59,7 +67,6 @@
 
     img {
       width: 100%;
-      filter: contrast(5) drop-shadow(5px 5px 20px white) saturate(4);
     }
 
     a {

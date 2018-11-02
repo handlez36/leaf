@@ -2,9 +2,10 @@
   flex: 0 0 auto;
 }
 .about-us, .activities, .scholarships, .contact-us, .donate, #hero {
-  flex: 1 0 auto;
+  flex: 5 0 auto;
 }
 #my-footer-wrapper {
-  flex: 0 0 auto;
+  flex: 1 0 auto;
+  // max-height: 20vh;
   z-index: 100;
 }

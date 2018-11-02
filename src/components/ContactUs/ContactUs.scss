@@ -1,12 +1,16 @@
 .contact-us {
-  .comment-form-section {
+  width: 100%;
+
+  .comment-box {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-top: 3vh;
 
     .comment-form {
-      flex: 0 1 50%;
+      flex: 0 0 40%;
+      padding: 1em;
     }
   }
 }

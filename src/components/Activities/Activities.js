@@ -46,7 +46,7 @@ class Activities extends Component {
         />
         <div className="wrapper">
           <div className="next-event-section">
-            <span>NEXT EVENT</span>
+            <span>PAST EVENTS</span>
             { !events && <div>Loading...</div> }
             { events && <FeaturedEvent event={splitEvents['featured']} /> }
           </div>

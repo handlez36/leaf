@@ -25,7 +25,7 @@ const FeaturedEvent = ({ event }) => {
       </div>
     )
   } else {
-    return <div className='next-event'>Events coming soon!</div>
+    return <div className='next-event'>Coming soon!</div>
   }
 }
 

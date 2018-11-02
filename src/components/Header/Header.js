@@ -66,7 +66,7 @@ class Header extends Component  {
                                 <span
                                     className='menu-link'
                                     onClick={this.onClick('HOME')}>
-                                    HOME
+                                    Home
                                 </span>
                             </li>
                             <li className="donate-menu-option">
@@ -81,6 +81,13 @@ class Header extends Component  {
                                     className='menu-link'
                                     onClick={this.onClick('SCHOLARSHIPS')}>
                                     Scholarships
+                                </span>
+                            </li>
+                            <li className='contact-menu-option'>
+                                <span
+                                    className='menu-link'
+                                    onClick={this.onClick('CONTACT')}>
+                                    Contact Us
                                 </span>
                             </li>
                         </ul>

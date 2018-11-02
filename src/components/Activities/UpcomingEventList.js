@@ -19,7 +19,7 @@ class UpcomingEventList extends Component {
     return (
       <div className='upcoming-events-section'>
         <span>UPCOMING EVENTS</span>
-        {events.length === 0  && <div className='upcoming-event empty'>More events coming soon!</div>}
+        {events.length === 0  && <div className='upcoming-event empty'>Events coming soon!</div>}
         {events.length > 0    && this.generateEventList(events)}
       </div>
     );

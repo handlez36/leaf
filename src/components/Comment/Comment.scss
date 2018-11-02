@@ -1,3 +1,29 @@
-.comment {
-  width: 30vw;
+// .comment {
+//   width: 30vw;
+// }
+
+.comment-form {
+  width: 40vw;
+
+  input {
+    height: 3vh;
+    border-radius: none;
+    color: black;
+  }
+
+  textarea {
+    color: black;
+  }
+
+  .buttons {
+    text-align: center;
+    
+    button {
+      width: 10vw;
+    }
+
+    .actions { 
+      margin-bottom: 0;
+    }
+  }
 }

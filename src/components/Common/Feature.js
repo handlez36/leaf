@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './Feature.scss'
 
 const Feature = ({ icon, title, text }) => {
@@ -6,8 +8,7 @@ const Feature = ({ icon, title, text }) => {
     <div className='feature-element'>
       <section className="col-4 col-12-narrower feature">
           <div className='mission2'>
-              <div className={`icon ${icon}`} />
-              {/* <div className='mission-title'>{title}</div> */}
+              <FontAwesomeIcon className='icon' icon={icon} />
               <div className='text'>{text}</div>
           </div>
       </section>
