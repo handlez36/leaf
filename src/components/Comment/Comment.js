@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from 'react-loaders';
 
 import { EmailProvider } from '../../services/email';
 import './Comment.scss'
@@ -11,7 +12,11 @@ class Comment extends Component {
         this.state = {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            loading: false,
+            success: null,
+            error: null,
+            inProgress: false
         }
     }
 
@@ -26,25 +31,43 @@ class Comment extends Component {
     submitForm = (e) => {
         e.preventDefault();
 
-        console.log('Submitting user suggestion.');
+        this.toggleBlur();
+        this.setState({ inProgress: true });
 
         this.email.send(this.state)
             .then(response => {
-                this.clearForm();
-                this.toggleFooter()
+                this.toggleBlur();
+
+                if (response.status === 200) {
+                    this.clearForm();
+                    this.setState({ success: true, inProgress: false });
+
+                    setInterval(() => { this.setState({ success: null })}, 3000);
+                } else {
+                    this.setState({ error: true, inProgress: false });
+
+                    setInterval(() => { this.setState({ error: null })}, 3000);
+                }
             })
             .catch(error => console.log('Mail send error: ', error));
     }
 
-    toggleFooter = () => {
-        const footer = document.getElementById('my-footer-wrapper');
+    toggleBlur = () => {
+        const commentArea = document.querySelector('form');
 
-        footer.classList.add('collapsed');
+        if (commentArea.classList.contains('blur')) {
+            commentArea.classList.remove('blur');
+        } else {
+            commentArea.classList.add('blur');
+        }
     }
 
     render() {
+        const {success, error, inProgress} = this.state;
+
         return (
             <section className="comment-form col-6 col-12-narrower">
+                {inProgress && <Loader type='line-scale-pulse-out' active /> }
                 <form method="post">
                     <div className="row gtr-50">
                         <div className="col-6 col-12-mobile">
@@ -94,6 +117,10 @@ class Comment extends Component {
                         </div>
                     </div>
                 </form>
+                <div className='status'>
+                    {success    && <div className='send-success'>Thank you for contacting us!</div>}
+                    {error      && <div className='send-error'>An error occurred while sending. Please re-send.</div>}
+                </div>
             </section>
         );
     }

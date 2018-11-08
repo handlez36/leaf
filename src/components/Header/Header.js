@@ -48,6 +48,13 @@ class Header extends Component  {
                                 alt='logo' />
                         </div>
                         <ul id="main-nav">
+                            <li className='home-menu-option'>
+                                <span
+                                    className='menu-link'
+                                    onClick={this.onClick('HOME')}>
+                                    Home
+                                </span>
+                            </li>                        
                             <li className='about-menu-option'>
                                 <span
                                     className='menu-link'
@@ -60,13 +67,6 @@ class Header extends Component  {
                                     className='menu-link'
                                     onClick={this.onClick('ACTIVITIES')}>
                                     Activities
-                                </span>
-                            </li>
-                            <li className='home-menu-option'>
-                                <span
-                                    className='menu-link'
-                                    onClick={this.onClick('HOME')}>
-                                    Home
                                 </span>
                             </li>
                             <li className="donate-menu-option">

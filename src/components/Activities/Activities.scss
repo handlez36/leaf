@@ -1,6 +1,7 @@
 .activities {
   display: flex;
   flex-direction: column;
+  height: auto;
 
   .banner {
     flex: 0 1 auto;
@@ -18,8 +19,15 @@
 
     .next-event-section {
       flex: 0 1 75%;
+      height: 100%;
       padding-left: 2em;
+      padding-right: 2em;
       padding-top: 1em;
+      padding-bottom: 1em;
+
+      .title {
+        border-bottom: 1px solid gray;
+      }
     }
   }
 }

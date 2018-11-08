@@ -15,6 +15,12 @@ class Activities extends Component {
     error: null
   }
 
+  displayPastEvents = (events) => {
+    return events.map( event => {
+      return <FeaturedEvent event={event} />;
+    });
+  }
+
   componentDidMount() {
     this.retrieveEvents();
   }
@@ -46,12 +52,12 @@ class Activities extends Component {
         />
         <div className="wrapper">
           <div className="next-event-section">
-            <span>PAST EVENTS</span>
+            <div clas>PAST EVENTS</div>
             { !events && <div>Loading...</div> }
-            { events && <FeaturedEvent event={splitEvents['featured']} /> }
+            { events && this.displayPastEvents(splitEvents['past']) }
           </div>
           { !events && <div>Loading...</div> }
-          { events && <UpcomingEventList events={splitEvents['remaining']} /> }
+          { events && <UpcomingEventList events={splitEvents['upcoming']} /> }
         </div>
       </div>
     );

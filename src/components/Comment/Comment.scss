@@ -1,9 +1,36 @@
-// .comment {
-//   width: 30vw;
-// }
+@import '~loaders.css/src/animations/line-scale-pulse-out.scss';
+// @import 'loaders.css/src/animations/cube-transition.scss';
+// @import '/node_modules/loaders.css/src/animations/cube-transition.scss';
+
+.comment-box.blur {
+  filter: blur(2px);
+}
 
 .comment-form {
   width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .loader {
+    position: absolute;
+    align-self: center;
+    // margin-left: 48vw;
+    // margin-top: 65vh;
+
+    .loader-hidden {
+      display: none;
+    }
+    .loader-active {
+      display: block;
+    }
+
+    .loader-inner {
+      div {
+        background-color: gray;
+      }
+    } 
+  }
 
   input {
     height: 3vh;
@@ -24,6 +51,23 @@
 
     .actions { 
       margin-bottom: 0;
+    }
+  }
+
+  .status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2em;
+    font-size: 0.8em;
+    font-weight: 600;
+
+    & > .send-success {
+      color: green;
+    }
+
+    & > .send-error {
+      color: red;
     }
   }
 }

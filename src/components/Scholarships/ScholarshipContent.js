@@ -34,7 +34,7 @@ export const content =
                     He had only a 4th grade education and worked the majority of his life as a share 
                     cropper and specialized in cotton.  In the mid 1960’s, he moved his family to Florence, 
                     South Carolina where he was an active member of New Ebenezer Baptist Church. For 30 years 
-                    he served his church and was a member of the male chorus. He was worked in security within 
+                    he served his church and was a member of the male chorus. He worked in security within 
                     the automotive industry for 20 years before retiring. In his spare time, he loved watching 
                     Nascar races, western movies, being outdoors, spending time with his family and was known 
                     as a jokester.`

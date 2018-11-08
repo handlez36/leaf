@@ -1,10 +1,12 @@
 import axios from 'axios';
+import moment from 'moment';
 
 const BASE_URL = 'https://leaffoundation.org/wp-json'
 
 export class EventsApi {
   static all() {
-    const url = 'tribe/events/v1/events';
+    // const url = 'tribe/events/v1/events';
+    const url = 'tribe/events/v1/events?start_date=2018-10-01&end_date=2019-01-01';
 
     return axios.get(`${BASE_URL}/${url}`);
   }
@@ -21,41 +23,27 @@ export class EventsApi {
     return null;
   }
 
-  static splitEvents(events, featuredId = null) {
+  static splitEvents(events) {
     if (!events) return null;
 
-    let eventHash = {};
+    let eventHash = {
+      'past':     [],
+      'upcoming': []
+    };
 
-    if (events.length === 1) {
-      const [event] = events;
+    events.forEach( event => {
+      if (Date.parse(event.start_date) < Date.now()) {
+        eventHash['past'].push(event);
+      } else {
+        eventHash['upcoming'].push(event);
+      }
+    })
 
-      eventHash['featured'] = event;
+    console.log('Event Hash: ', eventHash);
+    return eventHash;
+  }
 
-      return eventHash;
-    }
-
-    if (featuredId) {
-      const featured = events.find( event => event.id === featuredId )
-      const remaining = events.filter(event => event.id !== featuredId )
-
-      eventHash['featured']  = featured;
-      eventHash['remaining'] = remaining;
-    } else {
-      events.sort(function(eventOne, eventTwo) {
-        if (Date.parse(eventOne.start_date) < Date.parse(eventTwo.start_date)) {
-          return -1;
-        }
-        if (Date.parse(eventOne.start_date) > Date.parse(eventTwo.start_date)) {
-          return 1;
-        }
-
-        return 0;
-      })
-
-      eventHash['featured']   = events.shift();
-      eventHash['remaining']  = events;
-
-      return eventHash;
-    }
+  static formatDate(date) {
+    return moment(date).format('MMM Do YYYY | h:m A');
   }
 }

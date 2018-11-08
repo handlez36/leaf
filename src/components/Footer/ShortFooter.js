@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import Mailto from 'react-mailto';
 
 import Comment from '../Comment/Comment';
 import './Footer.scss'
@@ -26,15 +27,16 @@ class ShortFooter extends Component {
             <div id="my-footer-wrapper">
               <div id='contact-info-section'>
                 <div className='phone-info'>
-                  <div className='email'><span className="icon fa-envelope"></span> contact@leaffoundation.org</div>
+                  <div className='email'>
+                    <span className="icon fa-envelope"></span>
+                    <span className='email-link'>
+                        <a href="mailto:contact@leaffoundation.org">contact@leaffoundation.org</a>
+                    </span>
+                    {/* <Mailto email="contact@leaffoundation.org">
+                        contact@leaffoundation.org
+                    </Mailto> */}
+                  </div>
                 </div>
-                <div class='expansion-toggle' onClick={this.toggleFooterHeight}>                    
-                    Click to send feedback
-                </div>
-              </div>
-              <div className='contact-form'>
-                <div className='title'>SEND FEEDBACK</div>
-                <Comment />
               </div>
               <div id="copyright" className="container">
                   <ul className="menu">

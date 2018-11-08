@@ -1,26 +1,26 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
+import { EventsApi } from '../../services/events';
 import './FeaturedEvent.scss'
 
 const FeaturedEvent = ({ event }) => {  
+  const image = event.image && event.image.url;
+
   if (event) {
-    const image = event.image && event.image.url;
-    
     return (
-      <div className='next-event'>
-        <div className='title'>
-          <span>{event.title}</span>
-          <div>
-            <span>{event.date}</span>
-            <span></span>
+      <div className='past-event'>
+        <div className='header'>
+          <div className='title'>{event.title}</div>
+          <div className='date'>{EventsApi.formatDate(event.date)}</div>
+        </div>
+        <div className='body'>
+          <div className='featured-image'>
+            <img src={image} alt='featured_image' />
           </div>
-        </div>
-        <div className='event-image-lg'>
-          <img src={image} alt='featured' />
-        </div>
-        <div className='event-desc'>
-          { ReactHtmlParser(event.description) }
+          <div className='description'>
+            { ReactHtmlParser(event.description) }
+          </div>
         </div>
       </div>
     )

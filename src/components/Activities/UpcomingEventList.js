@@ -5,22 +5,25 @@ import './UpcomingEventList.scss'
 
 class UpcomingEventList extends Component {
   generateEventList(events) {
-    return events.map((event, index) => {
+    return events.map(event => {
       return (
         <UpcomingEvent event={event} />
       )
     })
   }
+
+  eventsAvailable(events) {
+    return events && events.length > 0;
+  }
   
   render() {
     const {events} = this.props;
 
-    console.log('Events: ', events);
     return (
       <div className='upcoming-events-section'>
         <span>UPCOMING EVENTS</span>
-        {events.length === 0  && <div className='upcoming-event empty'>Events coming soon!</div>}
-        {events.length > 0    && this.generateEventList(events)}
+        {!this.eventsAvailable(events) && <div className='upcoming-event empty'>Events coming soon!</div>}
+        { this.eventsAvailable(events)  && this.generateEventList(events)}
       </div>
     );
   }
