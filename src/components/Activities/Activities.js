@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import ModalImage from 'react-modal-image';
 
-import TopMessage from '../Common/TopMessage';
 import Banner from '../Common/Banner';
 import FeaturedEvent from './FeaturedEvent';
 import UpcomingEventList from './UpcomingEventList';

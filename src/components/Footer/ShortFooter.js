@@ -27,15 +27,6 @@ class ShortFooter extends Component {
             <div id="my-footer-wrapper">
               <div id='contact-info-section'>
                 <div className='phone-info'>
-                  <div className='email'>
-                    <span className="icon fa-envelope"></span>
-                    <span className='email-link'>
-                        <a href="mailto:contact@leaffoundation.org">contact@leaffoundation.org</a>
-                    </span>
-                    {/* <Mailto email="contact@leaffoundation.org">
-                        contact@leaffoundation.org
-                    </Mailto> */}
-                  </div>
                 </div>
               </div>
               <div id="copyright" className="container">

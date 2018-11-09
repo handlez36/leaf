@@ -44,6 +44,6 @@ export class EventsApi {
   }
 
   static formatDate(date) {
-    return moment(date).format('MMM Do YYYY | h:m A');
+    return moment(date).format('MMM Do YYYY | h:mm A');
   }
 }

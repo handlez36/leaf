@@ -1,23 +1,31 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import ModalImage from 'react-modal-image';
 
+import { EventsApi } from '../../services/events';
 import './UpcomingEvent.scss'
 
 const UpcomingEvent = ({ event }) => {
-  const url = event.image && event.image.url;
+  const url                   = event.image && event.image.url;
 
   return (
     <div className='upcoming-event'>
       <div className='title'>
-        <div className='left'><u>{event.title}</u></div>
-        <div className='right'>Oct. 30</div>
+        <div className='left'>{event.title}</div>
       </div>
+      <div className='right'>- {EventsApi.formatDate(event.start_date)} -</div>
       <div className='description'>
         { ReactHtmlParser(event.description) }
       </div>
       {url && 
         <div className='image'>
-          <img src={url} alt='event' />
+          <ModalImage
+            small={url}
+            medium={url}
+            hideDownload={true}
+            hideZoom={true}
+            alt={event.title}
+          />
         </div>
       }
     </div>

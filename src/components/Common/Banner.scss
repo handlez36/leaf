@@ -42,13 +42,15 @@
 
   .question {
     font-size: 3vw;
-    z-index: 1000;
+    // z-index: 900;
+    z-index: 100;
   }
 
   .answer {
     margin-top: 4vh;
     font-size: 1.3vw;
-    z-index: 1000;
+    // z-index: 900;
+    z-index: 100;
   }
 
   .banner-content {

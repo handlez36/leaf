@@ -38,6 +38,23 @@
         width: 100%;
         height: 100%;
       }
+
+      .__react_modal_image__modal_container {
+        position: fixed;
+        width: 55vw;
+        height: 30vw;
+        margin-top: 20vh;
+        margin-left: 25vw;
+        z-index: 1000;
+
+        .__react_modal_image__modal_content {
+          // position: fixed;
+
+          img {
+            // position: fixed;
+          }
+        }
+      }
     }
   
     .description {

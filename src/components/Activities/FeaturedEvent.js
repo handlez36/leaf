@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import ModalImage from 'react-modal-image';
 
 import { EventsApi } from '../../services/events';
 import './FeaturedEvent.scss'
@@ -16,7 +17,13 @@ const FeaturedEvent = ({ event }) => {
         </div>
         <div className='body'>
           <div className='featured-image'>
-            <img src={image} alt='featured_image' />
+            <ModalImage
+              small={image}
+              medium={image}
+              hideDownload={true}
+              hideZoom={true}
+              alt={event.title}
+            />
           </div>
           <div className='description'>
             { ReactHtmlParser(event.description) }
