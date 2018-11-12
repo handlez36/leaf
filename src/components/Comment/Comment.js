@@ -66,7 +66,7 @@ class Comment extends Component {
         const {success, error, inProgress} = this.state;
 
         return (
-            <section className="comment-form col-6 col-12-narrower">
+            <section className="comment-form col-6 col-12">
                 {inProgress && <Loader type='line-scale-pulse-out' active /> }
                 <form method="post">
                     <div className="row gtr-50">

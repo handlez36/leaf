@@ -30,4 +30,24 @@
       }
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .next-event-section {
+        flex: 0 1 auto;
+        width: 100%;
+      }
+
+      .upcoming-events-section {
+        flex: 0 1 auto;
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 2em;
+        box-shadow: none !important;
+      }
+    }
+  }
 }

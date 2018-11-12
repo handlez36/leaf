@@ -1,5 +1,4 @@
 .feature-element {
-  // padding-left: 1.95vw;
   padding-top: 2.0em;
   padding-left: 0;
 
@@ -9,7 +8,6 @@
     color: black;
     font-size: 13px;
     line-height: 1.5;
-    // padding-left: 1em;
     padding-right: 1em;
     font-family: 'lato';
 
@@ -33,4 +31,18 @@
 
 .feature-element:nth-child(1), .feature-element:nth-child(2), .feature-element:nth-child(3) {
   padding-top: 0.2em;
+}
+
+@media screen and (max-width: 480px) {
+  .feature-element {
+    text-align: center !important; 
+
+    .mission2 {
+      width: 30vw !important;
+
+      .text {
+        font-size: 0.7em;
+      }
+    }
+  }
 }

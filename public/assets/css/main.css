@@ -2827,10 +2827,10 @@ input, select, textarea {
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
 				backface-visibility: hidden;
-				-moz-transform: translateY(-50vh);
-				-webkit-transform: translateY(-50vh);
-				-ms-transform: translateY(-50vh);
-				transform: translateY(-50vh);
+				-moz-transform: translateY(-47.5vh);
+				-webkit-transform: translateY(-47.5vh);
+				-ms-transform: translateY(-47.5vh);
+				transform: translateY(-47.5vh);
 				-moz-transition: -moz-transform 0.5s ease;
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
@@ -2845,7 +2845,7 @@ input, select, textarea {
 				position: fixed;
 				top: 0;
 				width: 100%;
-				height: 50vh;
+				height: 47.5vh;
 				z-index: 10002;
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;
@@ -2899,17 +2899,17 @@ input, select, textarea {
 				}
 
 			body.navPanel-visible #page-wrapper {
-				-moz-transform: translateY(50vh);
-				-webkit-transform: translateY(50vh);
-				-ms-transform: translateY(50vh);
-				transform: translateY(50vh);
+				-moz-transform: translateY(47.5vh);
+				-webkit-transform: translateY(47.5vh);
+				-ms-transform: translateY(47.5vh);
+				transform: translateY(47.5vh);
 			}
 
 			body.navPanel-visible #navButton {
-				-moz-transform: translateY(50vh);
-				-webkit-transform: translateY(50vh);
-				-ms-transform: translateY(50vh);
-				transform: translateY(50vh);
+				-moz-transform: translateY(47.5vh);
+				-webkit-transform: translateY(47.5vh);
+				-ms-transform: translateY(47.5vh);
+				transform: translateY(47.5vh);
 			}
 
 			body.navPanel-visible #navPanel {
@@ -2933,7 +2933,7 @@ input, select, textarea {
 			}
 
 			.feature {
-				text-align: left;
+				text-align: center;
 			}
 
 		/* Sections/Article */

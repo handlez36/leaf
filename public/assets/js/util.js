@@ -27,12 +27,23 @@
 					$this.text() +
 				'</a>'
 			);
-
 		});
 
 		return b.join('');
 
 	};
+
+	$.fn.staticNavList = function() {
+		var links = [
+			'<a class="link depth-0" href="/about-us"><span class="indent-0"></span>About Us</a>',
+			'<a class="link depth-0" href="/activities"><span class="indent-0"></span>Activities</a>',
+			'<a class="link depth-0" href="/donate"><span class="indent-0"></span>Donate</a>',
+			'<a class="link depth-0" href="/scholarships"><span class="indent-0"></span>Scholarships</a>',
+			'<a class="link depth-0" href="/contact-us"><span class="indent-0"></span>Contact Us</a>',
+		]
+
+		return links.join('');
+	}
 
 	/**
 	 * Panel-ify an element.
@@ -47,7 +58,6 @@
 
 		// Multiple elements?
 			if (this.length > 1) {
-
 				for (var i=0; i < this.length; i++)
 					$(this[i]).panel(userConfig);
 

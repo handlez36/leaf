@@ -50,11 +50,46 @@
         }
       }
     }
+
+    @media screen and (max-width: 480px) {
+      .section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .content-image {
+          width: 100%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .content-text {
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: column;
+          padding: 0 1.3vw;
+  
+          .header {
+            font-size: 11px;
+          }
+        }
+      }
+    }
   }
 }
 
 .scholarship2 {
   .section-content {
     flex-direction: row-reverse !important;  
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .scholarship2 {
+    .section-content {
+      flex-direction: column !important;
+    }
   }
 }

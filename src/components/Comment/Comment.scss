@@ -71,3 +71,16 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .comment-form {
+    flex: 0 0 75% !important;
+  }
+
+  .actions {
+    button {
+      width: 100% !important;
+    }
+  }
+  
+}
