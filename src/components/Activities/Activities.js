@@ -75,7 +75,7 @@ class Activities extends Component {
       <div className='activities'>
         <Banner 
           title='ACTIVITIES'
-          tagline='COMING SOON!!'
+          tagline=''
           backgroundImage={BannerImage}
         />
         <div className="wrapper">
