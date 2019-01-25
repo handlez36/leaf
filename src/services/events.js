@@ -4,9 +4,15 @@ import moment from 'moment';
 const BASE_URL = 'https://leaffoundation.org/wp-json'
 
 export class EventsApi {
-  static all() {
-    // const url = 'tribe/events/v1/events';
-    const url = 'tribe/events/v1/events?start_date=2018-10-01&end_date=2019-01-01';
+  static pastEvents() {
+    const today = moment(new Date()).format('YYYY-MM-DD');
+    const url   = `tribe/events/v1/events?start_date=2018-10-01&end_date=${today}`;
+
+    return axios.get(`${BASE_URL}/${url}`);
+  }
+
+  static upcomingEvents() {
+    const url = 'tribe/events/v1/events';
 
     return axios.get(`${BASE_URL}/${url}`);
   }

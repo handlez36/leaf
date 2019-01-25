@@ -10,7 +10,8 @@ import './Activities.scss'
 
 class Activities extends Component {
   state = {
-    events: null,
+    pastEvents: null,
+    upcomingEvents: null,
     error: null
   }
 
@@ -24,23 +25,51 @@ class Activities extends Component {
     this.retrieveEvents();
   }
 
-  retrieveEvents() {
-    EventsApi.all()
-      .then(response => {
-        const events = response.data && response.data.events;
+  async retrievePastEvents() {
+    try {
+      const response  = await EventsApi.pastEvents();
+      const events    = response.data && response.data.events;
 
-        if (response.status === 200 && events) {
-          this.setState({ events });
-        } else {
-          this.setState({ error: 'Unable to retrieve Wordpress events' });
-        }
-      })
-      .catch(err => console.log('Network error retrieving Wordpress events. Error details: ', err))
+      if (response.status === 200 && events) {
+        this.setState({ pastEvents: events });
+      } else {
+        this.setState({ error: 'Unable to retrieve Wordpress events' });
+      }
+
+      return true;
+    } catch(e) {
+      this.setState({ error: 'Network error attempting to retrieve Wordpress events' });
+
+      return false;
+    }
+  }
+
+  async retrieveUpcomingEvents() {
+    try {
+      const response  = await EventsApi.upcomingEvents();
+      const events    = response.data && response.data.events;
+
+      if (response.status === 200 && events) {
+        this.setState({ upcomingEvents: events });
+      } else {
+        this.setState({ error: 'Unable to retrieve Wordpress events' });
+      }
+
+      return true;
+    } catch(e) {
+      this.setState({ error: 'Network error attempting to retrieve Wordpress events' });
+
+      return false;
+    }
+  }
+
+  retrieveEvents() {
+    this.retrieveUpcomingEvents();
+    this.retrievePastEvents();
   }
 
   render() {
-    const {events}    = this.state;
-    const splitEvents = EventsApi.splitEvents(events);
+    const {pastEvents, upcomingEvents}  = this.state;
     
     return (
       <div className='activities'>
@@ -52,11 +81,11 @@ class Activities extends Component {
         <div className="wrapper">
           <div className="next-event-section">
             <div clas>PAST EVENTS</div>
-            { !events && <div>Loading...</div> }
-            { events && this.displayPastEvents(splitEvents['past']) }
+            { !pastEvents && <div>Loading...</div> }
+            { pastEvents && this.displayPastEvents(pastEvents) }
           </div>
-          { !events && <div>Loading...</div> }
-          { events && <UpcomingEventList events={splitEvents['upcoming']} /> }
+          { !upcomingEvents && <div>Loading...</div> }
+          { upcomingEvents && <UpcomingEventList events={upcomingEvents} /> }
         </div>
       </div>
     );

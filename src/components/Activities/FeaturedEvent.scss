@@ -58,11 +58,33 @@
     }
   
     .description {
-      flex: 1 0 auto;
+      flex: 1 0 85%;
       height: auto;
       padding-left: 1em;
       padding-right: 1em;
       border-right: 1px solid gray;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .header {
+      display: block;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      .featured-image {
+        width: 100%;
+        margin-bottom: 1.5em;
+      }
+      .description {
+        width: 100%;
+        word-wrap: break-word;
+        border-right: none;
+      }
     }
   }
 }
