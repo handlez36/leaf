@@ -8,17 +8,7 @@ import './Scholarships.scss'
 
 class Scholarships extends Component {
   renderScholarshipRows() {
-    return content.map((scholarship, index) => {
-      return (
-        <ScholarshipRow
-          info={scholarship}
-          // image={scholarship.image}
-          // content={scholarship.content}
-          // appUrl={scholarship.appUrl}
-          index={index+1} 
-        />
-      )
-    })
+    return content.map( (scholarship, index) => <ScholarshipRow info={scholarship} index={index+1} /> )
   }
   
   render() {

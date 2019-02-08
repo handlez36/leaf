@@ -24,7 +24,6 @@ const UpcomingEvent = ({ event }) => {
             medium={url}
             hideDownload={true}
             hideZoom={true}
-            alt={event.title}
           />
         </div>
       }

@@ -9,9 +9,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-left: 1em;
     padding-right: 1em;
-    background-color: gray;
+    background-color: black;
     color: white;
     
     .title {
