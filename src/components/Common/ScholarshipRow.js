@@ -19,7 +19,7 @@ const ScholarshipRow = ({ info, index }) => {
           </div>
           <div className='content-text'>
           <div className='header'>
-              <span>The {content.name} Scholarship</span>
+              <div>The {content.name} Scholarship &nbsp;<span className='school'>{content.school ? `(${content.school})` : ''}</span></div>
               <span>{content.date}</span>
             </div>
             <div className='body'>

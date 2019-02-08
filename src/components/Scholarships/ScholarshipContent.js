@@ -12,6 +12,7 @@ export const content =
     content: 
     {
       name: "Lucious Leaf",
+      school: "West Florence High",
       date: "October 18, 1921 – October 5, 1996",
       description: `Lucious Leaf was born in Tallahassee, Florida to Elijah and Cherry Leaf.  
                     He had only a 4th grade education and worked the majority of his life as a share 
@@ -31,6 +32,7 @@ export const content =
     content: 
     {
       name: "Robert Lee Wilson, Jr.",
+      school: "Wilson High",
       date: "October 1, 1943 – March 20, 1966",
       description: `Robert Lee Wilson, Jr. was born in Florence, South Carolina. He was the only child 
                     of Robert Sr. and Almeta Wilson. He attended Wilson Senior High School and was outgoing 
@@ -47,6 +49,7 @@ export const content =
     content: 
     {
       name: "Richard Buchanan",
+      school: null,
       date: "April 13, 1926 – February 2, 2010",
       description: `Richard Lee Buchanan was born in Jackson, Mississippi. He was one of six 
                     children of Albert and Amanda Buchanan.  He attended Lanier High school 

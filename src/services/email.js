@@ -2,10 +2,6 @@ import { send } from 'emailjs-com';
 import axios from 'axios';
 
 export class EmailProvider {
-  constructor() {
-  
-  }
-
   send(params) {
     const msg = {
       "from_name": params.name,
