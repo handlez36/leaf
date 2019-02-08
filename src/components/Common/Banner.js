@@ -8,7 +8,7 @@ const Banner = ({ title, tagline, backgroundImage, children }) => {
       { backgroundImage && <img src={backgroundImage} alt='banner' /> }
       <div className="triangle"></div>
       <div className='question'>{title}</div>
-      <div className='answer'>{tagline}</div>
+      { tagline && <div className='answer'>{tagline}</div> }
       { children && 
         <div className='banner-content'>
           {children}

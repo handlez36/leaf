@@ -11,9 +11,10 @@ class Scholarships extends Component {
     return content.map((scholarship, index) => {
       return (
         <ScholarshipRow
-          image={scholarship.image}
-          content={scholarship.content}
-          url={scholarship.url}
+          info={scholarship}
+          // image={scholarship.image}
+          // content={scholarship.content}
+          // appUrl={scholarship.appUrl}
           index={index+1} 
         />
       )
@@ -25,7 +26,6 @@ class Scholarships extends Component {
       <div className='scholarships'>
         <Banner 
           title='SCHOLARSHIPS'
-          tagline='Scholarship details coming soon!'
           backgroundImage={background}
         />
         <div className='main'>

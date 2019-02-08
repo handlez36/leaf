@@ -4,28 +4,11 @@ import Robert from '../../assets/images/RobertLeeWilsonJr_resized.jpg';
 
 export const content = 
 [
-  {
-    image: Richard, 
-    url: '/',
-    content: 
-    {
-      name: "Richard Buchanan",
-      date: "April 13, 1926 – February 2, 2010",
-      description: `Richard Lee Buchanan was born in Jackson, Mississippi. He was one of six 
-                    children of Albert and Amanda Buchanan.  He attended Lanier High school 
-                    and upon his graduation joined the United States Army. He retired from 
-                    the military in 1972 after over 20 years of service and having earned 
-                    numerous awards and medals due to his leadership in World War I, World 
-                    War II, Japan and various assignments throughout the United States. He 
-                    had strong Christian values and served on several ministries, most proudly 
-                    his calling to serve as a Deacon. He was a Master Freemason and a high 
-                    ranking member of Shiners International who had a strong love of family, 
-                    laughter and service to others.`
-    } 
-  },
   { 
     image: Lucious,
     url: '/',
+    appUrl: 'https://www.leaffoundation.org/wp-content/uploads/2019/02/Lucious-Leaf-Scholarship-2019-Flyer.jpg',
+    applyUrl: 'https://fs8.formsite.com/theleaffoundation/gzzarmrlo2/index.html',
     content: 
     {
       name: "Lucious Leaf",
@@ -43,6 +26,8 @@ export const content =
   { 
     image: Robert,
     url: '/',
+    appUrl: 'https://www.leaffoundation.org/wp-content/uploads/2019/02/Robert-Lee-Wilson-Jr-2019-Scholarship-Flyer.jpg',
+    applyUrl: 'https://fs8.formsite.com/theleaffoundation/qblaacyunw/index.html',
     content: 
     {
       name: "Robert Lee Wilson, Jr.",
@@ -54,4 +39,25 @@ export const content =
                     for painting, when his life was cut much too short due to an automobile accident at the age of 22.`
     } 
   },
+  {
+    image: Richard, 
+    url: '/',
+    appUrl: null,
+    applyUrl: null,
+    content: 
+    {
+      name: "Richard Buchanan",
+      date: "April 13, 1926 – February 2, 2010",
+      description: `Richard Lee Buchanan was born in Jackson, Mississippi. He was one of six 
+                    children of Albert and Amanda Buchanan.  He attended Lanier High school 
+                    and upon his graduation joined the United States Army. He retired from 
+                    the military in 1972 after over 20 years of service and having earned 
+                    numerous awards and medals due to his leadership in World War I, World 
+                    War II, Japan and various assignments throughout the United States. He 
+                    had strong Christian values and served on several ministries, most proudly 
+                    his calling to serve as a Deacon. He was a Master Freemason and a high 
+                    ranking member of Shiners International who had a strong love of family, 
+                    laughter and service to others.`
+    } 
+  }
 ]
