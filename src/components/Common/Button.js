@@ -7,7 +7,8 @@ const Button = ({ title, url, onClick, variant }) => {
   return (
     <MyButton
       variant={variant}
-      style={{ width: '8vw', height: '6vh', fontSize: '20px' }} 
+      size='lg'
+      style={{ minWidth: '150px' }}
       onClick={() => onClick(url)}
       className='my-button'
     >
