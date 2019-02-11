@@ -5,7 +5,7 @@ import Banner from '../Common/Banner';
 import FeaturedEvent from './FeaturedEvent';
 import UpcomingEventList from './UpcomingEventList';
 import { EventsApi } from '../../services/events';
-import BannerImage from '../../assets/images/activities-banner.jpg';
+import BannerImage from '../../assets/images/activities-banner-2.jpg';
 import './Activities.scss'
 
 class Activities extends Component {

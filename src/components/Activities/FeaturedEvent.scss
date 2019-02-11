@@ -69,9 +69,12 @@
     .body {
       display: flex;
       flex-direction: column;
+      
       .featured-image {
-        width: 100%;
+        width: auto;
+        height: auto;
         margin-bottom: 1.5em;
+        align-self: center;
       }
       .description {
         width: 100%;
