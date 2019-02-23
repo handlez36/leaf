@@ -6,13 +6,18 @@
     flex: 1 1 auto;
     padding-top: 0;
 
+    .answer {
+      margin-top: 0;
+    }
+
     img {
       width: 100%;
       top: 87px;
     }
 
     .banner-content {
-      margin-top: 2.0em;
+      // margin-top: 2.0em;
+      margin-top: 0.5em;
     }
   }
 

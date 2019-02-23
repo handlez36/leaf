@@ -9,7 +9,7 @@ const Features = ({ details, header }) => {
 
     return (
         <div className={`wrapper feature-row ${header ? 'first' : ''}`}>
-            <section className="container">
+            <section className="feature-container">
                 { header && 
                     <TopMessage 
                         page='About Us'
