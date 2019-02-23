@@ -4,21 +4,22 @@ import { faGraduationCap, faHandHoldingUsd, faLifeRing, faHandshake, faKey, faFo
 
 import FeatureRow from '../Features/FeatureRow';
 import Banner from '../Common/Banner';
-import background from '../../assets/images/about-us-banner-resized.jpg'
+// import background from '../../assets/images/about-us-banner-resized.jpg'
+import background from '../../assets/images/kids_smiling_1200_800.jpeg'
 import './AboutUs.scss'
 
 const AboutUs = (props) => {
   library.add(faGraduationCap, faHandHoldingUsd, faLifeRing, faHandshake, faKey, faFootballBall);
 
-  const features = 
-  [
-    { icon: faHandHoldingUsd,   text: 'Educate on the importance of financial literacy.' },
-    { icon: faGraduationCap,    text: 'Provide support to advance the focus of education for teachers, students and schools.' },
-    { icon: faLifeRing,         text: 'Concentrate on the needs and support structure required of disadvantaged youth and the elderly.' },
-    { icon: faFootballBall,     text: 'Support youth sports and activities.' },
-    { icon: faKey,              text: 'Teach the keys to success by inspiring longevity, continuous development, entrepreneurship and achievement through forward-thinking.' },
-    { icon: faHandshake,        text: 'Assist other non-profit organizations that share a similar vision.' },
-  ];
+  const features =
+    [
+      { icon: faHandHoldingUsd, text: 'Educate on the importance of financial literacy.' },
+      { icon: faGraduationCap, text: 'Provide support to advance the focus of education for teachers, students and schools.' },
+      { icon: faLifeRing, text: 'Concentrate on the needs and support structure required of disadvantaged youth and the elderly.' },
+      { icon: faFootballBall, text: 'Support youth sports and activities.' },
+      { icon: faKey, text: 'Teach the keys to success by inspiring longevity, continuous development, entrepreneurship and achievement through forward-thinking.' },
+      { icon: faHandshake, text: 'Assist other non-profit organizations that share a similar vision.' },
+    ];
 
   return (
     <div className='about-us'>
